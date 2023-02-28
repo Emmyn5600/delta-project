@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  background-color: skyblue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+div#root {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.wrapper-box {
+  padding: 30px;
+}
+
+.word-crieteria__box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.generate-button {
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: skyblue;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.password-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.password-box > input[type='text'] {
+  width: 70%;
+  height: 35px;
+  margin-right: 10px;
+  font-size: 16px;
+  padding-left: 10px;
+  color: #000;
+  letter-spacing: 2px;
+}
+
+button.copy-button {
+  display: block;
+  width: 25%;
+  cursor: pointer;
+  border: 0px;
+  font-size: 14px;
+  font-weight: bolder;
+  border-radius: 5px;
+  background-color:skyblue;
+}
+
+.word-crieteria__box input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+
+.word-crieteria__box label {
+  font-weight: 500;
+}
+
+input[type='number'] {
+  width: 60px;
+  height: 20px;
+}
