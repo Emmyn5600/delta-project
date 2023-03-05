@@ -1,6 +1,5 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import NumberFormat from "react-number-format";
 import { NumericFormat } from 'react-number-format';
 
 type  Operators = "/" | "+" |  "X" |  "-"
@@ -32,6 +31,7 @@ function App() {
   useEffect(() => {
     setInput("0");
   }, []);
+  
   const operatorType = (e:any) => {
     setTotal(false);
     setOperator(e.target.innerText);
