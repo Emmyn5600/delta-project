@@ -81,3 +81,26 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+
+.result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+    font-size: 3rem;
+}
+
+.amount_result{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.link_results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    text-decoration: none;
+}
