@@ -1,0 +1,75 @@
+body{
+    background-color: #1a3942;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: #1a3942;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.title{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+select{
+    background-color: #1a3942;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.convert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+    background-color: #1a3942;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    width: 50%;
+}
+
+input{
+    background-color: #1a3942;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+button{
+    background-color: #1a3942;
+    border: 1px solid #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

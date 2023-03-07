@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.set('view engine', 'ejs');
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 const api_key = 'f116e8aa34dab3d00338878f4d963574';
 app.use(express.urlencoded({ extended: true }));

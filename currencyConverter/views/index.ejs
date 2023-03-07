@@ -2,27 +2,34 @@
 <html>
   <head>
     <title>Currency Converter</title>
+    <link href="/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Currency Converter</h1>
+    <h1 class="header">Currency Converter</h1>
     <form action="/convert">
-      <label for="from">From:</label>
-      <select name="from" id="from">
-        <% currencies.forEach(currency => { %>
-        <option value="<%= currency %>"><%= currency %></option>
-        <% }) %>
-      </select>
-      <br>
-      <label for="to">To:</label>
-      <select name="to" id="to">
-        <% currencies.forEach(currency => { %>
-        <option value="<%= currency %>"><%= currency %></option>
-        <% }) %>
-      </select>
-      <br>
-      <label for="amount">Amount:</label>
-      <input type="number" name="amount" id="amount">
-      <br>
+      <div class="convert">
+        <div class="card">
+          <label for="from" class="title">From:</label>
+          <select name="from" id="from">
+            <% currencies.forEach(currency => { %>
+            <option value="<%= currency %>"><%= currency %></option>
+            <% }) %>
+          </select>
+        </div>
+
+        <div class="card">
+          <label for="to" class="title">To:</label>
+          <select name="to" id="to">
+            <% currencies.forEach(currency => { %>
+            <option value="<%= currency %>"><%= currency %></option>
+            <% }) %>
+          </select>
+        </div>
+      </div>
+      <br />
+      <label for="amount" class="title">Amount:</label>
+      <input type="number" name="amount" id="amount" />
+      <br />
       <button type="submit">Convert</button>
     </form>
   </body>
