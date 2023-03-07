@@ -4,6 +4,21 @@
 
 
 
+## API Reference
+
+#### First signup at currencybeacon and get you api_key
+
+```http
+  GET https://api.currencyscoop.com/v1/latest?api_key
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+
+
+
+
 
 
 ## Run Locally
