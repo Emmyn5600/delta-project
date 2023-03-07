@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <h1>Currency Converter</h1>
+    <form action="/" method="post">
+      <label for="amount">Amount:</label>
+      <input type="number" name="amount" id="amount" required>
+      <br>
+      <label for="from">From:</label>
+      <select name="from" id="from" required>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+      </select>
+      <br>
+      <label for="to">To:</label>
+      <select name="to" id="to" required>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+      </select>
+      <br>
+      <button type="submit">Convert</button>
+    </form>
+  </body>
+</html>
