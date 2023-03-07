@@ -11,8 +11,7 @@ app.get('/', async (req, res) => {
   const response = await fetch(`https://api.currencyscoop.com/v1/latest?api_key=${api_key}`);
   const data = await response.json();
   const currencies = Object.keys(data.response.rates);
-  console.log(currencies);
-  // res.render('index', { currencies });
+  res.render('index', { currencies });
 });
 
 
