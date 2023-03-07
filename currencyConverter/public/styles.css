@@ -61,13 +61,21 @@ input{
     border-radius: 5px;
 }
 
+.amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-convert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 button{
     background-color: #1a3942;
     border: 1px solid #fff;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
