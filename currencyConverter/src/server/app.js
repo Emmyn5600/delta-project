@@ -20,6 +20,17 @@ app.get('/', async (req, res) => {
 
 
 
+app.get('/convert', async (req, res) => {
+  const from = req.query.from;
+  const to = req.query.to;
+  const amount = req.query.amount;
+  const response = await fetch(`https://api.currencyscoop.com/v1/convert?api_key=${api_key}&from=${from}&to=${to}&amount=${amount}`);
+  const data = await response.json();
+  const result = data.response.value;
+  res.render('convert', { result, from, to, amount });
+});
+
+
 
 
 
