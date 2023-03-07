@@ -77,6 +77,7 @@ function App() {
               onKeyPress={search}
             />
           </div>
+          <h1 className="error">{typeof weather.cod != "undefined" && weather.cod === "404" && weather.message }</h1>
           {typeof weather.main != "undefined" ? (
             <div>
               <div className="location-box">
