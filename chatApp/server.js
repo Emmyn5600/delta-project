@@ -27,12 +27,30 @@ io.on('connection', (socket) => {
     socket.join(user.room)
     socket.emit('message', formatMessage(userName,'Welcome! to chat app') )
 
-  socket.broadcast.emit('message',formatMessage(userName, `${user.username} has joined the chat`))
+  socket.broadcast.to(user.room).emit('message',formatMessage(userName, `${user.username} has joined the chat`))
+
+  //send users and room info
+  io.to(user.room).emit('roomUsers', {
+    room: user.room,
+    users: getRoomUsers(user.room)
 
   })
 
+  })
+
+
+  //run when client disconnect
   socket.on("disconnect", () => {
-    io.emit("message",formatMessage(userName, "A user has left"));
+    const user = userLeave(socket.id)
+    if(user){
+      io.to(user.room).emit('message',formatMessage(userName, `${user.username} has left the chat`))
+
+      //send users and room info
+      io.to(user.room).emit('roomUsers', {
+        room: user.room,
+        users: getRoomUsers(user.room)
+      })
+    }
   } );
 
   //listen for chatMessage
