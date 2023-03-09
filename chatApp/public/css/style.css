@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
+	--dark-color-a: #182246;
+	--dark-color-b: #2c3b72;
 	--light-color: #e6e9ff;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
@@ -31,11 +31,12 @@ a {
 
 .btn {
 	cursor: pointer;
-	padding: 5px 15px;
+	padding: 8px 15px;
 	background: var(--light-color);
 	color: var(--dark-color-a);
 	border: 0;
 	font-size: 17px;
+	border-radius: 5px;
 }
 
 /* Chat Page */
@@ -179,6 +180,24 @@ a {
 	width: 100%;
 }
 
+input{
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		padding: 12px 20px;
+		margin: 8px 0;
+		outline: none;
+}
+
+
+select{
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		padding: 12px 20px;
+		margin: 8px 0;
+		outline: none;
+}
 @media (max-width: 700px) {
 	.chat-main {
 		display: block;
