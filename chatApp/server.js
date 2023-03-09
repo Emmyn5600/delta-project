@@ -6,6 +6,7 @@ const port = 3000;
 const http = require('http')
 const socketio = require('socket.io')
 const formatMessage = require('./utils/messages')
+const {userJoin, getCurrentUser} = require('./utils/users')
 
 //set static folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,11 +20,16 @@ const io = socketio(server);
 const userName = 'ChatCord Bot'
 
 io.on('connection', (socket) => {
-  console.log('New WebSocket connection')
+ 
 
-  socket.emit('message', formatMessage(userName,'Welcome! to chat app') )
+  socket.on ('joinRoom', ({username, room}) => {
+    const user = userJoin(socket.id, username, room)
+    socket.join(room)
+    socket.emit('message', formatMessage(userName,'Welcome! to chat app') )
 
   socket.broadcast.emit('message',formatMessage(userName, 'A new user has joined'))
+
+  })
 
   socket.on("disconnect", () => {
     io.emit("message",formatMessage(userName, "A user has left"));
