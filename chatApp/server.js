@@ -24,10 +24,10 @@ io.on('connection', (socket) => {
 
   socket.on ('joinRoom', ({username, room}) => {
     const user = userJoin(socket.id, username, room)
-    socket.join(room)
+    socket.join(user.room)
     socket.emit('message', formatMessage(userName,'Welcome! to chat app') )
 
-  socket.broadcast.emit('message',formatMessage(userName, 'A new user has joined'))
+  socket.broadcast.emit('message',formatMessage(userName, `${user.username} has joined the chat`))
 
   })
 
