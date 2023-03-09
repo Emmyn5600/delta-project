@@ -28,24 +28,40 @@ ul {
 a {
 	text-decoration: none;
 }
-
+.time{
+		font-size: 12px;
+		color: #777;
+		margin-left: 10px;
+}
 .btn {
 	cursor: pointer;
-	padding: 8px 15px;
+	padding: 4px 10px;
 	background: var(--light-color);
 	color: var(--dark-color-a);
 	border: 0;
-	font-size: 17px;
+	font-size: 15px;
 	border-radius: 5px;
 }
-
+.btn-send{
+		cursor: pointer;
+		padding: 4px 15px;
+		background: var(--light-color);
+		color: var(--dark-color-a);
+		border: 0;
+		font-size: 17px;
+		border-radius: 5px;
+		margin-left: 1rem;
+}
 /* Chat Page */
 
 .chat-container {
 	max-width: 1100px;
+	height: 40rem;
 	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 .chat-header {
@@ -62,6 +78,7 @@ a {
 .chat-main {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
+	flex-grow: 1;
 }
 
 .chat-sidebar {
@@ -115,6 +132,7 @@ a {
 .chat-form-container {
 	padding: 20px 30px;
 	background-color: var(--dark-color-a);
+	margin-top: auto;
 }
 
 .chat-form-container form {
