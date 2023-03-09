@@ -6,7 +6,7 @@ const port = 3000;
 const http = require('http')
 const socketio = require('socket.io')
 const formatMessage = require('./utils/messages')
-const {userJoin, getCurrentUser} = require('./utils/users')
+const {userJoin, getCurrentUser,userLeave ,getRoomUsers} = require('./utils/users')
 
 //set static folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -35,8 +35,10 @@ io.on('connection', (socket) => {
     io.emit("message",formatMessage(userName, "A user has left"));
   } );
 
+  //listen for chatMessage
   socket.on('chatMessage', (message) => {
-    io.emit('message',formatMessage("userName", message))
+    const user = getCurrentUser(socket.id)
+    io.emit('message',formatMessage(user.username, message))
   })
 })
 
