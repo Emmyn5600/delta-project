@@ -6,6 +6,9 @@ const port = 3000;
 const http = require('http')
 const socketio = require('socket.io')
 
+//set static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
 //create server
 const server = http.createServer(app);
 
@@ -23,9 +26,12 @@ io.on('connection', (socket) => {
   socket.on("disconnect", () => {
     io.emit("message", "A user has left");
   } );
+
+  socket.on('chatMessage', (message) => {
+    io.emit('message', message)
+  })
 })
-//set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 
