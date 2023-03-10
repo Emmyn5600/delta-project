@@ -17,7 +17,7 @@ const server = http.createServer(app);
 //create socket
 const io = socketio(server);
 
-const userName = 'ChatCord Bot'
+const userName = 'Alice Bot'
 
 io.on('connection', (socket) => {
  
