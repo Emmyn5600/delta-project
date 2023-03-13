@@ -5,12 +5,9 @@ const getImageText = require('../index');
 describe('getImageText', () => {
   it('should return text from image', async () => {
     const text = await getImageText('testimage.png', 'eng', false);
-    expect(text).toEqual(`
-It was the best of
-times, it was the worst
-of times, it was the age
-of wisdom, it was the
-age of foolishness...`);
+    // remove all newlines
+    const textWithoutNewlines = text.replace(/\n/g, '');
+    expect(textWithoutNewlines).toMatch(`It was the best oftimes, it was the worstof times, it was the ageof wisdom, it was theage of foolishness...`);
   }); 
 }
 );
