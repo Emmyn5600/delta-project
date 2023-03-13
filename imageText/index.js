@@ -33,3 +33,7 @@ getImageText("testimage.png", "eng", false).then(text => {
 }).catch(errMsg => {
     console.log(errMsg)
 })
+
+
+
+module.exports = getImageText
