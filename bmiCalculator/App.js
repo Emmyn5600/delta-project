@@ -3,10 +3,9 @@ import Bmi from "./screen"
 
 export default function App() {
   return (
-    <View>
+    <View >
       <Bmi/>
     </View>
   );
 }
-
 
