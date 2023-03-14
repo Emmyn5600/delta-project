@@ -7,6 +7,7 @@ const SpellCorrector = require('spelling-corrector');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
 
 const tokenizer = new natural.WordTokenizer();
 const stemmer = natural.PorterStemmer;
