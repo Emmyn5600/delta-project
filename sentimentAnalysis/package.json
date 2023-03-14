@@ -1,0 +1,20 @@
+{
+  "name": "sentimentanalysis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apos-to-lex-form": "^1.0.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "natural": "^6.2.0",
+    "sentiment": "^5.0.2",
+    "spelling-corrector": "^3.0.0"
+  }
+}
