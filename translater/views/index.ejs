@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Language Translator</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <h1>Language Translator</h1>
@@ -26,7 +27,9 @@
     </form>
     <% if (translation) { %>
       <h2>Translation:</h2>
-      <p><%= translation %></p>
+     <section>
+        <p><%= translation %></p>
+     </section>
     <% } %>
   </body>
 </html>
