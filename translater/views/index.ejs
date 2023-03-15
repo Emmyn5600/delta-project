@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Language Translator</title>
+  </head>
+  <body>
+    <h1>Language Translator</h1>
+    <% if (error) { %>
+      <p><%= error %></p>
+    <% } %>
+    <form method="POST" action="/translate">
+      <div>
+        <label for="text">Text:</label>
+        <input type="text" name="input" id="input" required>
+      </div>
+      <div>
+        <label for="target">Target language:</label>
+        <select name="target" id="target" required>
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="es">Spanish</option>
+          <option value="de">German</option>
+        </select>
+      </div>
+      <button type="submit">Translate</button>
+    </form>
+    <% if (translation) { %>
+      <h2>Translation:</h2>
+      <p><%= translation %></p>
+    <% } %>
+  </body>
+</html>

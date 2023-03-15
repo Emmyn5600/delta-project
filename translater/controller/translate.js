@@ -12,3 +12,7 @@ const translateText = async (req, res) => {
     res.render('index', { error: 'Error translating text.', translation: ' ' });
   }
 }
+
+module.exports = {
+  translateText
+}
