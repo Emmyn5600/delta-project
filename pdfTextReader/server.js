@@ -1,10 +1,15 @@
 const express = require('express');
 const multer = require('multer');
 const { PythonShell } = require('python-shell');
-const fs = require('fs');
+var bodyParser = require('body-parser');
+var path = require('path');
 const app = express();
 
+//middleware
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 const storage = multer.diskStorage({
   destination: './uploads/',
@@ -15,16 +20,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { text: "" });
 });
 
 
-app.post('/extract',upload.single('pdfFile'), async (req, res) => {
+app.post('/',upload.single('pdfFile'), async (req, res) => {
   const options = {
     pythonPath: '/usr/bin/python3', // change this to the path of your Python executable
   };
   const text = await PythonShell.run('reader.py', null);
-  return res.status(200).send(text);
+  return res.status(200).render('index', { text: text })
 });
 
 app.listen(5000, () => {
