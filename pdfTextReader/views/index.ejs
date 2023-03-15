@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Text Extractor</title>
+</head>
+<body>
+  <h1>PDF Text Extractor</h1>
+  <form action="/" method="post" enctype="multipart/form-data">
+    <input type="file" name="pdfFile">
+    <button type="submit">Extract Text</button>
+  </form>
+  <% if (text) { %>
+    <pre><%= text %></pre>
+  <% } %>
+</body>
+</html>
