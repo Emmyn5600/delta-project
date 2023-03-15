@@ -1,13 +1,10 @@
-import PyPDF2
-import sys
 
-def extract_text(filename):
-    with open(filename, 'rb') as f:
-        reader = PyPDF2.PdfFileReader(f)
-        text = ''
-        for page in reader.pages:
-            text += page.extractText()
-    return text
+from PyPDF2 import PdfReader
 
-text = extract_text(sys.argv[1])
-print(text)
+# def extract_pdf():
+reader = PdfReader('uploads/uploaded_file.pdf')
+for i in range(len(reader.pages)):
+    page = reader.pages[i]
+    text = page.extract_text()
+    print(text)
+        # return text
